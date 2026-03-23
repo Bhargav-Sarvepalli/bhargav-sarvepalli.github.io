@@ -695,22 +695,16 @@
     width: 34px;
     height: 34px;
     border: 1px solid rgba(59,130,246,0.45);
-    background: rgba(59,130,246,0.08);
-    backdrop-filter: blur(3px);
-    transition:
-      width 0.2s ease,
-      height 0.2s ease,
-      border-color 0.2s ease,
-      background 0.2s ease,
-      transform 0.08s ease;
+    background: transparent;
+    transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
   }
   
-  .cursor-hover .cursor-ring {
-    width: 52px;
-    height: 52px;
-    border-color: rgba(6,182,212,0.7);
-    background: rgba(6,182,212,0.12);
-  }
+  body.cursor-hover .cursor-ring {
+     width: 52px;
+     height: 52px;
+     border-color: rgba(6,182,212,0.7);
+     background: transparent;
+   }
   
   @media (hover: none), (pointer: coarse) {
     .cursor-dot,
@@ -724,24 +718,24 @@
   }
  /* Better responsive behavior */
 @media (max-width: 1024px) {
-  nav {
-    padding: 1rem 2rem;
+    nav {
+      padding: 1rem 2rem;
+    }
+  
+    #hero {
+      padding: 7rem 2rem 4rem !important;
+    }
+  
+    section {
+      padding: 4rem 2rem;
+    }
+  
+    .hero-stats {
+      right: 2rem;
+      bottom: 2rem;
+      gap: 1.5rem;
+    }
   }
-
-  #hero {
-    padding: 7rem 2rem 4rem !important;
-  }
-
-  section {
-    padding: 4rem 2rem;
-  }
-
-  .hero-stats {
-    right: 2rem;
-    bottom: 2rem;
-    gap: 1.5rem;
-  }
-}
 
 @media (max-width: 768px) {
   nav {
@@ -899,6 +893,26 @@
     max-width: 100px;
   }
 }
+ .typing-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  color: var(--text);
+}
+
+.typing-caret {
+  display: inline-block;
+  width: 10px;
+  height: 1.1em;
+  border-right: 2px solid var(--accent2);
+  animation: blinkCaret 1s steps(1) infinite;
+  transform: translateY(2px);
+}
+
+@keyframes blinkCaret {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
 </style>
 </head>
 <body>
@@ -932,7 +946,12 @@
       <span class="line2">Sarvepalli</span>
     </h1>
     <p class="hero-subtitle fade-up delay-3">
-      Full-Stack Software Engineer & MS CS candidate building AI-powered web apps, scalable backends, and user-facing dashboards. Currently @ UMBC (GPA 3.74).
+      <span class="typing-role">
+        <span id="typing-text"></span>
+        <span class="typing-caret"></span>
+      </span>
+      <br>
+      Building modern web apps, scalable backends, and user-facing dashboards. Currently @ UMBC (GPA 3.74).
     </p>
     <div class="hero-ctas fade-up delay-4">
       <a href="#projects" class="btn-primary">View Projects →</a>
@@ -1292,6 +1311,46 @@
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease, border-color 0.3s, background 0.2s';
     observer.observe(el);
   });
+
+ // Typing animation
+  const roles = [
+    "Frontend Engineer",
+    "Full-Stack Engineer"
+  ];
+  
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  
+  const typingElement = document.getElementById("typing-text");
+  
+  function typeEffect() {
+    const currentRole = roles[roleIndex];
+  
+    if (isDeleting) {
+      charIndex--;
+    } else {
+      charIndex++;
+    }
+  
+    typingElement.textContent = currentRole.substring(0, charIndex);
+  
+    let speed = isDeleting ? 50 : 90;
+  
+    if (!isDeleting && charIndex === currentRole.length) {
+      speed = 1200; // pause at full text
+      isDeleting = true;
+    } 
+    else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      speed = 400; // pause before typing next
+    }
+  
+    setTimeout(typeEffect, speed);
+  }
+  
+  typeEffect();
 </script>
 </body>
 </html>
