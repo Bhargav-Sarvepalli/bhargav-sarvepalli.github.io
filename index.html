@@ -167,12 +167,9 @@
   }
 
   h1.hero-name {
-    font-family: var(--sans);
     font-size: clamp(3rem, 7vw, 6rem);
     font-weight: 800;
     line-height: 1.0;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
   }
 
   .hero-name .line2 {
@@ -181,12 +178,9 @@
   }
 
   .hero-subtitle {
-    font-family: var(--mono);
     font-size: 1rem;
-    color: var(--muted);
     margin: 1.5rem 0 2.5rem;
-    max-width: 520px;
-    line-height: 1.8;
+    display: block; 
   }
 
   .hero-ctas {
@@ -898,6 +892,9 @@
   align-items: center;
   gap: 0.15rem;
   color: var(--text);
+  font-size: 1rem; 
+  font-family: var(--mono);
+  white-space: nowrap;
 }
 
 .typing-caret {
@@ -947,7 +944,7 @@
     </h1>
     <p class="hero-subtitle fade-up delay-3">
       <span class="typing-role">
-        <span id="typing-text"></span>
+        Frontend & Full-Stack Engineer
         <span class="typing-caret"></span>
       </span>
       <br>
@@ -1312,45 +1309,6 @@
     observer.observe(el);
   });
 
- // Typing animation
-  const roles = [
-    "Frontend Engineer",
-    "Full-Stack Engineer"
-  ];
-  
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  
-  const typingElement = document.getElementById("typing-text");
-  
-  function typeEffect() {
-    const currentRole = roles[roleIndex];
-  
-    if (isDeleting) {
-      charIndex--;
-    } else {
-      charIndex++;
-    }
-  
-    typingElement.textContent = currentRole.substring(0, charIndex);
-  
-    let speed = isDeleting ? 50 : 90;
-  
-    if (!isDeleting && charIndex === currentRole.length) {
-      speed = 1200; // pause at full text
-      isDeleting = true;
-    } 
-    else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      speed = 400; // pause before typing next
-    }
-  
-    setTimeout(typeEffect, speed);
-  }
-  
-  typeEffect();
 </script>
 </body>
 </html>
