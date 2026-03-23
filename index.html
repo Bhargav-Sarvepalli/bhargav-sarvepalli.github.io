@@ -297,6 +297,48 @@ footer p{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spac
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 768px) {
+  .name-line1 {
+    white-space: normal;
+  }
+
+  #hero > div:first-child {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  h1.hero-name {
+    font-size: clamp(2.4rem, 11vw, 3.2rem);
+    line-height: 0.95;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-badge {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-link {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  #contact-section .btn-ghost {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
 </style>
 </head>
 <body>
