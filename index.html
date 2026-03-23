@@ -84,6 +84,9 @@ nav.scrolled{padding:.75rem 4rem;}
 
 /* HERO */
 #hero{position:relative;min-height:88vh;display:flex;align-items:center;padding:7rem 4rem 3rem;z-index:1;overflow:hidden;}
+#hero > div:first-child {
+  max-width: 900px;
+}
 @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1);}33%{transform:translate(20px,-28px) scale(1.04);}66%{transform:translate(-14px,18px) scale(.97);}}
 .orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;animation:orbFloat 14s ease-in-out infinite;}
 .orb1{width:600px;height:600px;background:rgba(59,130,246,.1);top:-180px;right:-150px;animation-delay:0s;}
@@ -99,7 +102,7 @@ nav.scrolled{padding:.75rem 4rem;}
 .hero-tag::before{content:'';display:inline-block;width:28px;height:1px;background:linear-gradient(90deg,transparent,var(--accent2));}
 
 h1.hero-name {
-  font-size: clamp(3.2rem, 6vw, 4.8rem);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
   font-weight: 800;
   line-height: 0.96;
   letter-spacing: -0.025em;
@@ -111,6 +114,10 @@ h1.hero-name {
   -webkit-text-stroke: 1px rgba(59,130,246,0.35);
   opacity: 0.9;
   margin-top: 0.15rem;
+}
+  .name-line1 {
+  display: block;
+  white-space: nowrap;
 }
 
 /* typing role */
@@ -155,7 +162,13 @@ section{position:relative;z-index:1;padding:5rem 4rem;max-width:1200px;margin:0 
 h2.section-title{font-family:var(--sans);font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.025em;margin-bottom:3rem;line-height:1.1;}
 
 /* SKILLS */
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
 .skill-cell{background:var(--surface);padding:1.6rem;transition:background .25s;position:relative;overflow:hidden;}
 .skill-cell::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .3s;}
 .skill-cell:hover{background:var(--surface2);}
@@ -273,6 +286,17 @@ footer p{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spac
   .skills-grid{grid-template-columns:1fr;}
   .stat-num{font-size:1.6rem;}
 }
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -320,7 +344,7 @@ footer p{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spac
     <div class="avail-badge"><span class="status-dot"></span>Actively seeking Software Engineering roles — Summer/Fall 2026</div>
     <div class="hero-tag">Frontend &amp; Full-Stack Engineer</div>
     <h1 class="hero-name">
-      Sree Sai Bhargav<br/>
+      <span class="name-line1">Sree Sai Bhargav</span>
       <span class="line2">Sarvepalli</span>
     </h1>
     <p class="hero-subtitle">
