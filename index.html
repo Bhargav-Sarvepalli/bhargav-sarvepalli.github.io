@@ -250,13 +250,8 @@ footer p{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spac
 @media(max-width:768px){
   #hero{padding:7rem 1.5rem 9rem!important;align-items:flex-start;}
   section{padding:3.5rem 1rem;}
-  .hero-stats{
-    position:static;
-    margin-top:1.4rem;
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:0.75rem;
-    width:100%;
+  .hero-stats {
+    display: none;
   }
   .stat-item{
     text-align:left;
@@ -282,9 +277,21 @@ footer p{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spac
   .hero-ctas a{width:100%;justify-content:center;}
 }
 @media(max-width:480px){
-  h1.hero-name{font-size:2.6rem;}
-  .skills-grid{grid-template-columns:1fr;}
-  .stat-num{font-size:1.6rem;}
+  h1.hero-name {
+    font-size: clamp(2.6rem, 5.2vw, 4.2rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.7rem;
+  }
+  .hero-name .line2 {
+    margin-top: 0.25rem;
+    opacity: 0.75;
+  }
+@media (max-width: 768px) {
+  .hero-tag {
+    margin-top: 0.5rem;
+    margin-bottom: 1.2rem;
+  }
 }
 @media (max-width: 1024px) {
   .skills-grid {
@@ -337,6 +344,11 @@ footer p{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spac
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .avail-badge {
+    display: none;
   }
 }
 </style>
