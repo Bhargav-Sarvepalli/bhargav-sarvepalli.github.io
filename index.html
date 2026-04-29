@@ -16,16 +16,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  @media (max-width: 768px) {
-    .hero-stats { display: none !important; }
-    .avail-badge { white-space: normal !important; font-size: .58rem !important; max-width: 100% !important; }
-    #hero { overflow: hidden !important; padding: 7rem 1.25rem 3rem !important; }
-    h1.hero-name { transform: none !important; font-size: clamp(2.2rem, 10vw, 3rem) !important; }
-    .hero-ctas { flex-direction: column !important; width: 100% !important; }
-    .hero-ctas a { width: 100% !important; justify-content: center !important; }
-  }
-</style>
 </head>
 <body>
 
@@ -43,7 +33,7 @@
   <a href="#projects"   onclick="closeMobile()">Projects</a>
   <a href="#experience" onclick="closeMobile()">Experience</a>
   <a href="#contact"    onclick="closeMobile()">Contact</a>
-  <a href="Sree_Sai_Bhargav_Sarvepalli_Resume.pdf" download style="color:var(--accent2);" onclick="closeMobile()">↓ Resume</a>
+  <a href="Bhargav_Resume.pdf" download style="color:var(--accent2);" onclick="closeMobile()">↓ Resume</a>
 </div>
 
 <!-- NAV -->
@@ -81,7 +71,7 @@
     </p>
     <div class="hero-ctas fade-up delay-4">
       <a href="#projects" class="btn-primary">View Projects →</a>
-      <a href="Sree_Sai_Bhargav_Sarvepalli_Resume.pdf" download class="btn-download">
+      <a href="Bhargav_Resume.pdf" download class="btn-download">
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1v8M3.5 6.5l3 3 3-3M1 11h11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Download Resume
       </a>
@@ -119,11 +109,11 @@
     </div>
     <div class="skill-cell">
       <div class="skill-category">Frontend</div>
-      <div class="skill-tags"><span class="skill-tag">React.js</span><span class="skill-tag">JavaScript ES6+</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">Bootstrap</span></div>
+      <div class="skill-tags"><span class="skill-tag">React.js</span><span class="skill-tag">Next.js</span><span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript ES6+</span><span class="skill-tag">Tailwind CSS</span><span class="skill-tag">Three.js</span><span class="skill-tag">Framer Motion</span></div>
     </div>
     <div class="skill-cell">
       <div class="skill-category">Backend</div>
-      <div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Django</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Node.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Microservices</span></div>
+      <div class="skill-tags"><span class="skill-tag">Django</span><span class="skill-tag">DRF</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Node.js</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Supabase</span></div>
     </div>
     <div class="skill-cell">
       <div class="skill-category">Core Computer Science</div>
@@ -156,15 +146,20 @@
   <h2 class="section-title reveal">Featured Projects</h2>
   <div class="projects-grid stagger">
 
+
     <div class="project-card">
       <div class="project-num">PROJECT_01</div>
-      <div class="project-title">NexTask — Kanban Board</div>
-      <div class="project-highlight">AI Powered · Drag &amp; Drop · Real-time UI</div>
-      <div class="project-desc">A clean, responsive AI powered Kanban board app with drag-and-drop task management, column-based workflow, and real-time UI updates. Built with a focus on smooth UX and modern frontend patterns.</div>
+      <div class="project-title">NexTask — AI-Powered Project &amp; Task Management SaaS</div>
+      <div class="project-highlight">Full-Stack SaaS · AI Assistant · Real-time Collaboration</div>
+      <div class="project-desc">Full-stack SaaS platform with real-time collaborative Kanban boards, drag-and-drop with optimistic UI, and Flow — a visual git-style project map. Built Nex, an AI assistant (Anthropic API) that creates tasks via natural language, generates descriptions, and summarizes project activity. Multi-user workspaces with Supabase Realtime, Row Level Security, and Google OAuth.</div>
       <div class="tech-stack">
-        <span class="tech-pill">React</span>
-        <span class="tech-pill">JavaScript</span>
-        <span class="tech-pill">CSS3</span>
+        <span class="tech-pill">React 18</span>
+        <span class="tech-pill">TypeScript</span>
+        <span class="tech-pill">Tailwind CSS</span>
+        <span class="tech-pill">Supabase</span>
+        <span class="tech-pill">Anthropic API</span>
+        <span class="tech-pill">Three.js</span>
+        <span class="tech-pill">Framer Motion</span>
         <span class="tech-pill">Vercel</span>
       </div>
       <div class="project-actions">
@@ -172,7 +167,7 @@
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           Live Demo
         </a>
-        <a href="https://github.com/Bhargav-Sarvepalli/kanban-board" target="_blank" class="project-btn-github">
+        <a href="https://github.com/Bhargav-Sarvepalli" target="_blank" class="project-btn-github">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
           GitHub
         </a>
@@ -181,9 +176,36 @@
 
     <div class="project-card">
       <div class="project-num">PROJECT_02</div>
+      <div class="project-title">Quantum SVM — Network Intrusion Detection</div>
+      <div class="project-highlight">Quantum vs Classical · KDD Cup 99 · Streamlit + React</div>
+      <div class="project-desc">Implemented a Quantum SVM using Qiskit's ZZFeatureMap and FidelityQuantumKernel to classify network intrusions on the KDD Cup 99 dataset. Benchmarked quantum kernel performance head-to-head against a classical RBF-SVM across accuracy, F1, and ROC-AUC. Built a React 18 + Three.js landing page and a Streamlit dashboard with precomputed cached results.</div>
+      <div class="tech-stack">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Qiskit</span>
+        <span class="tech-pill">Scikit-learn</span>
+        <span class="tech-pill">Streamlit</span>
+        <span class="tech-pill">React 18</span>
+        <span class="tech-pill">TypeScript</span>
+        <span class="tech-pill">Three.js</span>
+        <span class="tech-pill">Vercel</span>
+      </div>
+      <div class="project-actions">
+        <a href="https://qsvm-anomaly-detection.vercel.app/" target="_blank" class="project-btn-demo">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Live Demo
+        </a>
+        <a href="https://github.com/Bhargav-Sarvepalli/qsvm-anomaly-detection" target="_blank" class="project-btn-github">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">PROJECT_03</div>
       <div class="project-title">Pulsar Star Detection as a Service</div>
       <div class="project-highlight">99% Accuracy · ROC-AUC 0.973</div>
-      <div class="project-desc">Cloud-deployed ML microservice using FastAPI + LightGBM to classify pulsar candidates from telescope features. Streamlit dashboard with batch predictions, EDA visualizations, and SHAP-based interpretability.</div>
+      <div class="project-desc">Cloud-deployed ML microservice using FastAPI + LightGBM to classify pulsar candidates from telescope features. Independent microservices for ingestion, preprocessing, inference, and storage. Streamlit dashboard with batch predictions, SHAP interpretability, and EDA visualizations deployed on AWS EC2.</div>
       <div class="tech-stack">
         <span class="tech-pill">FastAPI</span>
         <span class="tech-pill">LightGBM</span>
@@ -191,12 +213,19 @@
         <span class="tech-pill">Docker</span>
         <span class="tech-pill">AWS EC2</span>
         <span class="tech-pill">PostgreSQL</span>
+        <span class="tech-pill">Redis</span>
         <span class="tech-pill">Optuna</span>
+      </div>
+      <div class="project-actions">
+        <a href="https://github.com/Bhargav-Sarvepalli/pulsar-star-prediction-service" target="_blank" class="project-btn-github">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
       </div>
     </div>
 
     <div class="project-card">
-      <div class="project-num">PROJECT_03</div>
+      <div class="project-num">PROJECT_04</div>
       <div class="project-title">Cross-lingual Sentiment Analysis</div>
       <div class="project-highlight">Zero-shot &amp; Fine-tuned · 3 Transformer Models</div>
       <div class="project-desc">Multilingual emotion-classification workflows using mBERT, XLM-R, and XLNet. Evaluated across multi-domain datasets with reproducible benchmarking pipelines and optimized tokenization strategies.</div>
@@ -211,7 +240,7 @@
     </div>
 
     <div class="project-card">
-      <div class="project-num">PROJECT_04</div>
+      <div class="project-num">PROJECT_05</div>
       <div class="project-title">Chest X-Ray Classification CNN</div>
       <div class="project-highlight">AUC 0.99 COVID · 0.98 Pneumonia · 0.97 Normal</div>
       <div class="project-desc">CNN models to classify chest X-rays into COVID-19, Pneumonia, and Normal categories. Applied data augmentation, EDA, and GPU-accelerated training to reduce overfitting on imbalanced medical imaging datasets.</div>
@@ -234,13 +263,14 @@
   <h2 class="section-title reveal">Work History</h2>
   <div class="timeline">
     <div class="timeline-item reveal">
-      <div class="timeline-period">Mar 2026 – present</div>
+      <div class="timeline-period">Mar 2026 – Present</div>
       <div class="timeline-role">Software Developer</div>
       <div class="timeline-org">American Technology Initiative Inc.</div>
       <ul class="timeline-bullets">
-        <li>Developing a full-stack volunteer portal using Django, Django REST Framework, React, and PostgreSQL.</li>
-        <li>Implementing APIs, volunteer tracking features, surveys, and reporting dashboards.</li>
-        <li>Working in a Dockerized environment with GitLab for version control and collaborative development.</li>
+        <li>Lead end-to-end development of a containerized full-stack volunteer management platform (React + TypeScript + Django + PostgreSQL), owning feature delivery across frontend, API design, and deployment.</li>
+        <li>Designed and optimized RESTful APIs with Django REST Framework, improving real-time data access and reporting performance for volunteer coordinators across multiple user roles.</li>
+        <li>Architected Docker-based dev and production environments, reducing developer onboarding time and ensuring consistent parity between local and deployed builds.</li>
+        <li>Maintained code quality through GitLab CI/CD pipelines and peer code reviews; diagnosed and resolved production issues improving overall application reliability.</li>
       </ul>
     </div>
     <div class="timeline-item reveal">
@@ -319,14 +349,14 @@
       LinkedIn
     </a>
     <a href="tel:+16674520666" class="contact-link">⌥ +1 667-452-0666</a>
-    <a href="Sree_Sai_Bhargav_Sarvepalli_Resume.pdf" download class="btn-ghost">Download Resume ↓</a>
+    <a href="Bhargav_Resume.pdf" download class="btn-ghost">Download Resume ↓</a>
   </div>
 </section>
 </div>
 
 <footer>
   <p>© 2026 · Sree Sai Bhargav Sarvepalli</p>
-  <p>Built with HTML · CSS · JS</p>
+  <p>Built with HTML · CSS · JS · ☕</p>
 </footer>
 
 <script src="script.js"></script>
