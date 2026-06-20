@@ -217,6 +217,7 @@ h1.hero-name {
   font-size: clamp(.85rem, 1.6vw, 1.05rem);
   width: 100%;
 }
+.hero-subtitle-centered .blink { width: 8px; height: 16px; margin-left: 6px; }
 .hero-ctas-centered { justify-content: center; margin-top: 0.5rem; }
 .hero-meta-line {
   margin-top: 1.4rem;
@@ -372,13 +373,13 @@ h2.section-title { font-family: var(--sans); font-size: clamp(2rem,4vw,3rem); fo
 .project-card-minor .project-desc { font-size: .8rem; }
 .more-projects-toggle { margin-top: 2rem; }
 .more-projects-toggle summary {
-  font-family: var(--mono); font-size: .75rem; color: var(--muted);
-  letter-spacing: .05em; cursor: pointer; padding: .75rem 0;
-  border-top: 1px solid var(--border); list-style: none;
+  font-family: var(--mono); font-size: .9rem; color: #39e991; font-weight: 700;
+  letter-spacing: .06em; cursor: pointer; padding: 1rem 0;
+  border-top: 1px solid rgba(57,233,145,0.25); list-style: none;
   transition: color .2s;
 }
 .more-projects-toggle summary::-webkit-details-marker { display: none; }
-.more-projects-toggle summary::before { content: '+ '; color: var(--accent); }
+.more-projects-toggle summary::before { content: '+ '; color: #39e991; font-size: 1.1em; }
 .more-projects-toggle[open] summary::before { content: '– '; }
 .more-projects-toggle summary:hover { color: var(--text); }
 
