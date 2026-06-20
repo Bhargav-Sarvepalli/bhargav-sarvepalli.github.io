@@ -53,23 +53,20 @@
 
 <!-- HERO -->
 <div id="about">
-<section id="hero" style="max-width:none; padding: 8rem 4rem 4rem;">
+<section id="hero" class="hero-centered" style="max-width:none; padding: 2rem 4rem;">
   <div class="hero-orb orb1"></div>
   <div class="hero-orb orb2"></div>
 
-  <div>
-    <div class="avail-badge"><span class="status-dot"></span>Actively seeking Software Engineering roles — Summer/Fall 2026</div>
-    <div class="hero-tag">Frontend &amp; Full-Stack Engineer<span class="blink"></span></div>
-    <h1 class="hero-name">
-      <span class="name-line1">Sree Sai Bhargav</span>
-      <span class="line2">Sarvepalli</span>
+  <div class="hero-center-wrap">
+    <div class="hero-tag">Full-Stack Engineer<span class="blink"></span></div>
+    <h1 class="hero-name hero-name-glitch hero-name-xl">
+      <span class="name-line1" data-text="Sree Sai Bhargav">Sree Sai Bhargav</span>
+      <span class="line2" data-text="Sarvepalli">Sarvepalli</span>
     </h1>
-    <p class="hero-subtitle">
-      MS Computer Science @ <em>UMBC</em> · GPA 3.74<br/>
-      Building modern web apps, scalable backends, and user-facing dashboards.<br/>
-      Currently shipping at <em>American Technology Initiative Inc.</em>
+    <p class="hero-subtitle hero-subtitle-centered">
+      Built <em>NexTask</em> solo — from database schema to deployment.
     </p>
-    <div class="hero-ctas fade-up delay-4">
+    <div class="hero-ctas hero-ctas-centered fade-up delay-4">
       <a href="#projects" class="btn-primary">View Projects →</a>
       <a href="Sree_Sai_Bhargav_Sarvepalli_Resume.pdf" download class="btn-download">
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1v8M3.5 6.5l3 3 3-3M1 11h11" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -77,21 +74,7 @@
       </a>
       <a href="mailto:sreesaibhargav@gmail.com" class="btn-ghost">Get in Touch</a>
     </div>
-  </div>
-
-  <div class="hero-stats fade-up delay-4">
-    <div class="stat-item">
-      <div class="stat-num">5+</div>
-      <div class="stat-label">Projects Shipped</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">3.74</div>
-      <div class="stat-label">GPA</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">99%</div>
-      <div class="stat-label">ML Accuracy</div>
-    </div>
+    <p class="hero-meta-line">M.S. Computer Science, <em>UMBC</em> (GPA 3.79, May 2026) · Available immediately on OPT, no sponsorship required</p>
   </div>
 </section>
 </div>
@@ -144,37 +127,47 @@
 <section id="projects">
   <div class="section-label reveal">02 — Work</div>
   <h2 class="section-title reveal">Featured Projects</h2>
-  <div class="projects-grid stagger">
 
-
-    <div class="project-card">
-      <div class="project-num">PROJECT_01</div>
-      <div class="project-title">NexTask — AI-Powered Project &amp; Task Management SaaS</div>
-      <div class="project-highlight">Full-Stack SaaS · AI Assistant · Real-time Collaboration</div>
-      <div class="project-desc">Full-stack SaaS platform with real-time collaborative Kanban boards, drag-and-drop with optimistic UI, and Flow — a visual git-style project map. Built Nex, an AI assistant (Anthropic API) that creates tasks via natural language, generates descriptions, and summarizes project activity. Multi-user workspaces with Supabase Realtime, Row Level Security, and Google OAuth.</div>
-      <div class="tech-stack">
-        <span class="tech-pill">React 18</span>
-        <span class="tech-pill">TypeScript</span>
-        <span class="tech-pill">Tailwind CSS</span>
-        <span class="tech-pill">Supabase</span>
-        <span class="tech-pill">Anthropic API</span>
-        <span class="tech-pill">Three.js</span>
-        <span class="tech-pill">Framer Motion</span>
-        <span class="tech-pill">Vercel</span>
+  <div class="flow-showcase reveal">
+    <div class="flow-showcase-header">
+      <div class="flow-showcase-titles">
+        <div class="project-highlight">Full-Stack SaaS · AI Assistant · Real-time Collaboration</div>
+        <div class="project-title" style="font-size:1.5rem; margin-bottom:0;">NexTask — AI-Powered Project &amp; Task Management SaaS</div>
       </div>
-      <div class="project-actions">
-        <a href="https://www.nextask.live/" target="_blank" class="project-btn-demo">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          Live Demo
-        </a>
-        <a href="https://github.com/Bhargav-Sarvepalli" target="_blank" class="project-btn-github">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          GitHub
-        </a>
-      </div>
+      <div class="flow-window-dots"><span></span><span></span><span></span><span class="flow-window-label">NEXTASK — FLOW</span></div>
     </div>
 
-    <div class="project-card">
+    <div class="flow-canvas-wrap flow-canvas-img">
+      <img src="flow-screenshot.png" alt="NexTask's Flow view: a git-style visual project map showing milestones branching off a central Kickoff → Designing → Build → Launch timeline, color-coded by status" loading="lazy"/>
+    </div>
+
+    <div class="project-desc" style="margin-top:1.75rem;">Built solo from zero to production in 5 months. NexTask replaces the gap between Linear (too rigid) and Notion (too unstructured) for small technical teams — real-time collaborative Kanban, Flow (the git-style visual project map shown above), and Nex, an AI assistant that creates and summarizes tasks via the Anthropic API. Multi-tenant data isolation enforced at the database layer with PostgreSQL Row Level Security.</div>
+
+    <div class="tech-stack">
+      <span class="tech-pill">React 18</span>
+      <span class="tech-pill">TypeScript</span>
+      <span class="tech-pill">Tailwind CSS</span>
+      <span class="tech-pill">Supabase</span>
+      <span class="tech-pill">Anthropic API</span>
+      <span class="tech-pill">Three.js</span>
+      <span class="tech-pill">Framer Motion</span>
+      <span class="tech-pill">Vercel</span>
+    </div>
+    <div class="project-actions">
+      <a href="https://www.nextask.live/" target="_blank" class="project-btn-demo">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H4M11 1v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Live Demo
+      </a>
+      <a href="https://github.com/Bhargav-Sarvepalli" target="_blank" class="project-btn-github">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+
+  <div class="projects-grid stagger" style="margin-top:1.5rem;">
+
+    <div class="project-card project-card-minor">
       <div class="project-num">PROJECT_02</div>
       <div class="project-title">Quantum SVM — Network Intrusion Detection</div>
       <div class="project-highlight">Quantum vs Classical · KDD Cup 99 · Streamlit + React</div>
@@ -201,7 +194,7 @@
       </div>
     </div>
 
-    <div class="project-card">
+    <div class="project-card project-card-minor">
       <div class="project-num">PROJECT_03</div>
       <div class="project-title">Pulsar Star Detection as a Service</div>
       <div class="project-highlight">99% Accuracy · ROC-AUC 0.973</div>
@@ -224,35 +217,39 @@
       </div>
     </div>
 
-    <div class="project-card">
-      <div class="project-num">PROJECT_04</div>
-      <div class="project-title">Cross-lingual Sentiment Analysis</div>
-      <div class="project-highlight">Zero-shot &amp; Fine-tuned · 3 Transformer Models</div>
-      <div class="project-desc">Multilingual emotion-classification workflows using mBERT, XLM-R, and XLNet. Evaluated across multi-domain datasets with reproducible benchmarking pipelines and optimized tokenization strategies.</div>
-      <div class="tech-stack">
-        <span class="tech-pill">PyTorch</span>
-        <span class="tech-pill">HuggingFace</span>
-        <span class="tech-pill">mBERT</span>
-        <span class="tech-pill">XLM-R</span>
-        <span class="tech-pill">XLNet</span>
-        <span class="tech-pill">Scikit-learn</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="project-num">PROJECT_05</div>
-      <div class="project-title">Chest X-Ray Classification CNN</div>
-      <div class="project-highlight">AUC 0.99 COVID · 0.98 Pneumonia · 0.97 Normal</div>
-      <div class="project-desc">CNN models to classify chest X-rays into COVID-19, Pneumonia, and Normal categories. Applied data augmentation, EDA, and GPU-accelerated training to reduce overfitting on imbalanced medical imaging datasets.</div>
-      <div class="tech-stack">
-        <span class="tech-pill">TensorFlow</span>
-        <span class="tech-pill">Keras</span>
-        <span class="tech-pill">OpenCV</span>
-        <span class="tech-pill">CNN</span>
-      </div>
-    </div>
-
   </div>
+
+  <details class="more-projects-toggle reveal">
+    <summary>More Projects (academic / coursework)</summary>
+    <div class="projects-grid stagger" style="margin-top:1.5rem;">
+      <div class="project-card project-card-minor">
+        <div class="project-num">PROJECT_04</div>
+        <div class="project-title">Cross-lingual Sentiment Analysis</div>
+        <div class="project-highlight">Zero-shot &amp; Fine-tuned · 3 Transformer Models</div>
+        <div class="project-desc">Multilingual emotion-classification workflows using mBERT, XLM-R, and XLNet. Evaluated across multi-domain datasets with reproducible benchmarking pipelines and optimized tokenization strategies.</div>
+        <div class="tech-stack">
+          <span class="tech-pill">PyTorch</span>
+          <span class="tech-pill">HuggingFace</span>
+          <span class="tech-pill">mBERT</span>
+          <span class="tech-pill">XLM-R</span>
+          <span class="tech-pill">XLNet</span>
+          <span class="tech-pill">Scikit-learn</span>
+        </div>
+      </div>
+      <div class="project-card project-card-minor">
+        <div class="project-num">PROJECT_05</div>
+        <div class="project-title">Chest X-Ray Classification CNN</div>
+        <div class="project-highlight">AUC 0.99 COVID · 0.98 Pneumonia · 0.97 Normal</div>
+        <div class="project-desc">CNN models to classify chest X-rays into COVID-19, Pneumonia, and Normal categories. Applied data augmentation, EDA, and GPU-accelerated training to reduce overfitting on imbalanced medical imaging datasets.</div>
+        <div class="tech-stack">
+          <span class="tech-pill">TensorFlow</span>
+          <span class="tech-pill">Keras</span>
+          <span class="tech-pill">OpenCV</span>
+          <span class="tech-pill">CNN</span>
+        </div>
+      </div>
+    </div>
+  </details>
 </section>
 
 <hr class="divider"/>
@@ -328,18 +325,18 @@
 <hr class="divider"/>
 
 <!-- CONTACT -->
-<div id="contact">
+<div id="contact" class="section-fullscreen">
 <section id="contact-section">
-  <div class="section-label reveal" style="justify-content:center; margin-bottom:1rem;">05 — Let's Connect</div>
-  <h2 class="section-title reveal" style="font-size:clamp(2rem,5vw,3.5rem); margin-bottom:1rem;">Open to<br/>Opportunities</h2>
-  <p class="contact-tagline reveal">
-    Graduating May 2026 · Looking for full-stack or frontend engineering roles.<br/>
-    I build fast, ship often, and love working on products people actually use.
+  <div class="section-label reveal" style="justify-content:center; margin-bottom:1.25rem;">05 — Let's Connect</div>
+  <h2 class="section-title reveal" style="font-size:clamp(2.4rem,5.5vw,4.2rem); margin-bottom:1.5rem; line-height:1.08;">Open to Opportunities</h2>
+  <p class="contact-tagline reveal" style="font-size:clamp(.85rem,1.3vw,.98rem); line-height:1.85; max-width:560px; margin:0 auto;">
+    M.S. Computer Science, UMBC — graduated May 2026.<br/>
+    Available immediately on OPT. Open to frontend and full-stack roles, remote or on-site.
   </p>
-  <div class="reveal" style="margin-top:2rem;">
-    <a href="mailto:sreesaibhargav@gmail.com" class="btn-primary" style="font-size:0.9rem; padding: 1rem 2rem;">sreesaibhargav@gmail.com →</a>
+  <div class="reveal" style="margin-top:2.25rem;">
+    <a href="mailto:sreesaibhargav@gmail.com" class="btn-primary" style="font-size:0.95rem; padding: 1rem 2.25rem;">sreesaibhargav@gmail.com →</a>
   </div>
-  <div class="contact-links reveal">
+  <div class="contact-links reveal" style="margin-top:1.75rem;">
     <a href="https://github.com/Bhargav-Sarvepalli" target="_blank" class="contact-link">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
       GitHub
